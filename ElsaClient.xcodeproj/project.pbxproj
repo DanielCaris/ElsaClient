@@ -17,6 +17,10 @@
 		BDAB6B0327D0FB9700BA4F0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAB6AD927D0FB9500BA4F0B /* ContentView.swift */; };
 		BDAB6B0427D0FB9700BA4F0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDAB6ADA27D0FB9600BA4F0B /* Assets.xcassets */; };
 		BDAB6B0527D0FB9700BA4F0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDAB6ADA27D0FB9600BA4F0B /* Assets.xcassets */; };
+		BDBE4D7227ED07B80043F1A5 /* DictionaryWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBE4D7127ED07B80043F1A5 /* DictionaryWord.swift */; };
+		BDBE4D7327ED07B80043F1A5 /* DictionaryWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBE4D7127ED07B80043F1A5 /* DictionaryWord.swift */; };
+		BDBE4D7527ED07DC0043F1A5 /* DictionaryWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBE4D7427ED07DC0043F1A5 /* DictionaryWordView.swift */; };
+		BDBE4D7627ED07DC0043F1A5 /* DictionaryWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDBE4D7427ED07DC0043F1A5 /* DictionaryWordView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,8 @@
 		BDAB6AF827D0FB9600BA4F0B /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDAB6AFC27D0FB9600BA4F0B /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		BDAB6AFE27D0FB9700BA4F0B /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		BDBE4D7127ED07B80043F1A5 /* DictionaryWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryWord.swift; sourceTree = "<group>"; };
+		BDBE4D7427ED07DC0043F1A5 /* DictionaryWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryWordView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				BDAB6AD827D0FB9500BA4F0B /* ElsaClientApp.swift */,
-				BDAB6AD927D0FB9500BA4F0B /* ContentView.swift */,
+				BDBE4D7727ED07FB0043F1A5 /* Views */,
 				BDC6419D27ECF84B00D3BC26 /* Models */,
 				BDAB6ADA27D0FB9600BA4F0B /* Assets.xcassets */,
 			);
@@ -142,9 +148,19 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		BDBE4D7727ED07FB0043F1A5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BDAB6AD927D0FB9500BA4F0B /* ContentView.swift */,
+				BDBE4D7427ED07DC0043F1A5 /* DictionaryWordView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		BDC6419D27ECF84B00D3BC26 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BDBE4D7127ED07B80043F1A5 /* DictionaryWord.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -307,8 +323,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDBE4D7527ED07DC0043F1A5 /* DictionaryWordView.swift in Sources */,
 				BDAB6B0227D0FB9700BA4F0B /* ContentView.swift in Sources */,
 				BDAB6B0027D0FB9700BA4F0B /* ElsaClientApp.swift in Sources */,
+				BDBE4D7227ED07B80043F1A5 /* DictionaryWord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,8 +334,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDBE4D7627ED07DC0043F1A5 /* DictionaryWordView.swift in Sources */,
 				BDAB6B0327D0FB9700BA4F0B /* ContentView.swift in Sources */,
 				BDAB6B0127D0FB9700BA4F0B /* ElsaClientApp.swift in Sources */,
+				BDBE4D7327ED07B80043F1A5 /* DictionaryWord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
