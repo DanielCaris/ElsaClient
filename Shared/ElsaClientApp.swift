@@ -11,7 +11,7 @@ import SwiftUI
 struct ElsaClientApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(dictionaryWord: DictionaryWord.examples[0])
         }
     }
 }

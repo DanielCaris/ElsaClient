@@ -99,6 +99,7 @@
 			children = (
 				BDAB6AD827D0FB9500BA4F0B /* ElsaClientApp.swift */,
 				BDAB6AD927D0FB9500BA4F0B /* ContentView.swift */,
+				BDC6419D27ECF84B00D3BC26 /* Models */,
 				BDAB6ADA27D0FB9600BA4F0B /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -139,6 +140,13 @@
 				BDAB6AFE27D0FB9700BA4F0B /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		BDC6419D27ECF84B00D3BC26 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
