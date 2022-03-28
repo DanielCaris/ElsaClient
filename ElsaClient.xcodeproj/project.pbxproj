@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD26375427F12F21001C5E38 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD26375327F12F21001C5E38 /* Authentication.swift */; };
+		BD26375527F12F21001C5E38 /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD26375327F12F21001C5E38 /* Authentication.swift */; };
+		BD26375927F1482B001C5E38 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD26375827F1482B001C5E38 /* NetworkExtension.framework */; };
 		BDAB6AF127D0FB9600BA4F0B /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAB6AF027D0FB9600BA4F0B /* Tests_iOS.swift */; };
 		BDAB6AF327D0FB9600BA4F0B /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAB6AF227D0FB9600BA4F0B /* Tests_iOSLaunchTests.swift */; };
 		BDAB6AFD27D0FB9600BA4F0B /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAB6AFC27D0FB9600BA4F0B /* Tests_macOS.swift */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD26375327F12F21001C5E38 /* Authentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		BD26375627F1482B001C5E38 /* ElsaClient (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ElsaClient (iOS).entitlements"; sourceTree = "<group>"; };
+		BD26375827F1482B001C5E38 /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS15.4.sdk/System/Library/Frameworks/NetworkExtension.framework; sourceTree = DEVELOPER_DIR; };
 		BDAB6AD827D0FB9500BA4F0B /* ElsaClientApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElsaClientApp.swift; sourceTree = "<group>"; };
 		BDAB6AD927D0FB9500BA4F0B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BDAB6ADA27D0FB9600BA4F0B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD26375927F1482B001C5E38 /* NetworkExtension.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,14 +96,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD26375727F1482B001C5E38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD26375827F1482B001C5E38 /* NetworkExtension.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BDAB6AD227D0FB9400BA4F0B = {
 			isa = PBXGroup;
 			children = (
+				BD26375627F1482B001C5E38 /* ElsaClient (iOS).entitlements */,
 				BDAB6AD727D0FB9400BA4F0B /* Shared */,
 				BDAB6AE627D0FB9600BA4F0B /* macOS */,
 				BDAB6AEF27D0FB9600BA4F0B /* Tests iOS */,
 				BDAB6AFB27D0FB9600BA4F0B /* Tests macOS */,
 				BDAB6AE027D0FB9600BA4F0B /* Products */,
+				BD26375727F1482B001C5E38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				BDBE4D7127ED07B80043F1A5 /* DictionaryWord.swift */,
+				BD26375327F12F21001C5E38 /* Authentication.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,7 +264,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					BDAB6ADE27D0FB9600BA4F0B = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -326,6 +344,7 @@
 				BDBE4D7527ED07DC0043F1A5 /* DictionaryWordView.swift in Sources */,
 				BDAB6B0227D0FB9700BA4F0B /* ContentView.swift in Sources */,
 				BDAB6B0027D0FB9700BA4F0B /* ElsaClientApp.swift in Sources */,
+				BD26375427F12F21001C5E38 /* Authentication.swift in Sources */,
 				BDBE4D7227ED07B80043F1A5 /* DictionaryWord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -337,6 +356,7 @@
 				BDBE4D7627ED07DC0043F1A5 /* DictionaryWordView.swift in Sources */,
 				BDAB6B0327D0FB9700BA4F0B /* ContentView.swift in Sources */,
 				BDAB6B0127D0FB9700BA4F0B /* ElsaClientApp.swift in Sources */,
+				BD26375527F12F21001C5E38 /* Authentication.swift in Sources */,
 				BDBE4D7327ED07B80043F1A5 /* DictionaryWord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -491,6 +511,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ElsaClient (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3GGB9J5232;
@@ -521,6 +542,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "ElsaClient (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3GGB9J5232;
@@ -553,6 +575,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -581,6 +604,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

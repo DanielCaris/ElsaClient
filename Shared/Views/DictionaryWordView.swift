@@ -8,30 +8,34 @@
 import SwiftUI
 
 struct DictionaryWordView: View {
-    @State var dictionaryWord: DictionaryWord
+    @Binding var dictionaryWord: DictionaryWord?
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 20) {
-            VStack {
-                Text(dictionaryWord.sentence)
-                    .font(.largeTitle)
-                Text("/\(dictionaryWord.transcript[0].transcript_ipa)/")
-                    .font(.headline)
-            }
+        if (dictionaryWord != nil) {
             
-            Text("Definitions")
-                .font(.title)
-            ForEach(dictionaryWord.definition) { definition in
-                VStack(alignment: .leading) {
-                    Text("definition")
+            VStack(alignment: .leading, spacing: 20) {
+                VStack {
+                    Text(dictionaryWord?.sentence ?? "")
+                        .font(.largeTitle)
+                    Text("/\(dictionaryWord?.transcript[0].transcript_ipa ?? "")/")
                         .font(.headline)
-                    Text(definition.definition)
-                    
-                    
-                    Text("example")
-                            .font(.headline)
-                    Text(definition.example)
                 }
+                
+                Text("Definitions")
+                    .font(.title)
+                ForEach(dictionaryWord?.definitions ?? []) { definition in
+                    VStack(alignment: .leading) {
+                        Text("definition")
+                            .font(.headline)
+                        Text(definition.definition)
+                        
+                        
+                        Text("example")
+                            .font(.headline)
+                        Text(definition.example ?? "")
+                    }
+                }
+                
             }
             
         }
@@ -40,7 +44,9 @@ struct DictionaryWordView: View {
 }
 
 struct DictionaryWordView_Previews: PreviewProvider {
+    @State static var dictionaryWord: DictionaryWord? = DictionaryWord.examples[0]
+    
     static var previews: some View {
-        DictionaryWordView(dictionaryWord: DictionaryWord.examples[0])
+        DictionaryWordView(dictionaryWord: $dictionaryWord)
     }
 }

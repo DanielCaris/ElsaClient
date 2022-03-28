@@ -10,7 +10,12 @@ import Foundation
 struct Definition: Decodable, Identifiable {
     var id = UUID()
     let definition: String
-    let example: String
+    let example: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case definition
+        case example
+    }
 }
 
 
@@ -20,18 +25,32 @@ struct Transcript: Decodable, Identifiable {
     let text: String
     let spelling: String
     let trans: [String]
+    
+    enum CodingKeys: String, CodingKey {
+        case transcript_ipa
+        case text
+        case spelling
+        case trans
+    }
 }
 
 struct DictionaryWord: Decodable, Identifiable {
     var id = UUID()
-    let definition: [Definition]
+    let definitions: [Definition]
     let transcript: [Transcript]
     let sentence: String
     let tts_url: String
     
+    enum CodingKeys: String, CodingKey {
+        case definitions
+        case transcript
+        case sentence
+        case tts_url
+    }
+    
     static let examples = [
         DictionaryWord(
-            definition: [
+            definitions: [
                 Definition(
                     definition: "in, at, or to this place or position",
                     example: "they have lived here most of their lives"
