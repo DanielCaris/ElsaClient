@@ -35,7 +35,10 @@ struct ContentView: View {
             
             DictionaryWordView(dictionaryWord: $dictionaryWord)
             
-        }.padding()
+            Spacer()
+            
+        }
+        .padding()
         
     }
     

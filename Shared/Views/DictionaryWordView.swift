@@ -6,19 +6,44 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct DictionaryWordView: View {
     @Binding var dictionaryWord: DictionaryWord?
     
+    @State var audioPlayer: AVPlayer!
+    
     var body: some View {
         if (dictionaryWord != nil) {
-            
             VStack(alignment: .leading, spacing: 20) {
-                VStack {
-                    Text(dictionaryWord?.sentence ?? "")
-                        .font(.largeTitle)
-                    Text("/\(dictionaryWord?.transcript[0].transcript_ipa ?? "")/")
-                        .font(.headline)
+                HStack {
+                    Button(action: {
+                        let urlString = dictionaryWord?.tts_url
+                        
+                        guard let url = URL(string: urlString!) else {return}
+                        
+                        let item = AVPlayerItem(url: url)
+                        
+                        let player = AVPlayer(playerItem: item)
+                        
+                        self.audioPlayer = player
+                        self.audioPlayer.playImmediately(atRate: 1.0)
+                        
+                    }) {
+                        Image(systemName: "play.circle.fill").resizable()
+                            .frame(width: 50, height: 50)
+                            .aspectRatio(contentMode: .fit)
+                    }
+                    
+                    VStack(alignment: .leading) {
+                        Text(dictionaryWord?.sentence ?? "")
+                            .font(.largeTitle)
+                        Text("/\(dictionaryWord?.transcript[0].transcript_ipa ?? "")/")
+                            .font(.headline)
+                    }
+                    
+                    Spacer()
+                    
                 }
                 
                 Text("Definitions")
@@ -37,9 +62,7 @@ struct DictionaryWordView: View {
                 }
                 
             }
-            
         }
-        
     }
 }
 
