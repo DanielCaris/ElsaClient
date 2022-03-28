@@ -46,18 +46,28 @@ struct DictionaryWordView: View {
                     
                 }
                 
-                Text("Definitions")
-                    .font(.title)
-                ForEach(dictionaryWord?.definitions ?? []) { definition in
-                    VStack(alignment: .leading) {
-                        Text("definition")
-                            .font(.headline)
-                        Text(definition.definition)
+                ScrollView {
+                    VStack(alignment: .leading, spacing: 15) {
                         
+                        Text("Definitions")
+                            .font(.title)
                         
-                        Text("example")
-                            .font(.headline)
-                        Text(definition.example ?? "")
+                        ForEach(dictionaryWord?.definitions ?? []) { definition in
+                            VStack(alignment: .leading, spacing: 10) {
+                                VStack(alignment: .leading) {
+                                    Text("definition")
+                                        .font(.headline)
+                                    Text(definition.definition)
+                                }
+                                
+                                
+                                VStack(alignment: .leading) {
+                                    Text("example")
+                                        .font(.headline)
+                                    Text(definition.example ?? "")
+                                }
+                            }
+                        }
                     }
                 }
                 
